@@ -4,8 +4,9 @@ import url from "url";
 import { powerValidator } from "./validators/powerValidator";
 import { colorValidator } from "./validators/colorValidator";
 import { bightnessValidator } from "./validators/bightnessValidator";
+import { log } from "util";
 
-export const reqParser = Task.sequenceGen(async function* () {
+export const reqParser = Task.sequenceFromGen(async function* () {
   for await (let q of httpQueue) {
     const info = url.parse(q.req.url ?? "", true);
     yield {

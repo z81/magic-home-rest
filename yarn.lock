@@ -537,10 +537,10 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
-"@lather/core@^0.4.3":
-  version "0.4.5"
-  resolved "https://registry.yarnpkg.com/@lather/core/-/core-0.4.5.tgz#0858d25814aab3e96dae07f3304f869be8bfeaa1"
-  integrity sha512-FLS3Wb8+9lPcouIO5rTIpy9XRTnNxsoRVIkU99l/h9UHxgzs+oQUVnExDXiKWSG09j34BnLWhafBCbyXg8Kuew==
+"@lather/core@^0.4.7":
+  version "0.4.7"
+  resolved "https://registry.yarnpkg.com/@lather/core/-/core-0.4.7.tgz#49816b6746b87daaf7cb70c8ccd1d8a3ea72c134"
+  integrity sha512-HZ1J3ngIie2Xbjx1TpGnV4dpRD+cKHd41N6fVcfpOZR1Ipk4f3nlyxO3uCM7OPoEoKV4a4N5i/M7MZ3ZnrMx5w==
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
@@ -2884,7 +2884,7 @@ lru-cache@^6.0.0:
 
 magic-home@z81/node-magichome:
   version "2.7.0"
-  resolved "https://codeload.github.com/z81/node-magichome/tar.gz/f7f2bb6443abc63335455c9d2f3dbaa3534fc9ba"
+  resolved "https://codeload.github.com/z81/node-magichome/tar.gz/f901c9a05ca7a5708de26ebed7f812b65c26eb16"
   dependencies:
     commander "^2.20.0"
     merge-options "^1.0.1"

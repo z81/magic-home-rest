@@ -38,7 +38,7 @@
     "typescript": "^4.3.4"
   },
   "dependencies": {
-    "@lather/core": "^0.4.3",
+    "@lather/core": "^0.4.7",
     "magic-home": "z81/node-magichome"
   }
 }

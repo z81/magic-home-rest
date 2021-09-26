@@ -13,8 +13,6 @@ export const setColor = (
       Task.empty
         .access<{ control: Control }>()
         .map(({ control }) =>
-          control
-            .setColorWithBrightness(r, g, b, brightness ?? 100)
-            .catch(() => {})
+          control.setColorWithBrightness(r, g, b, brightness ?? 100)
         )
     );

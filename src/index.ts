@@ -3,6 +3,7 @@ import { setPower } from "./commands/setPower";
 import { setColor } from "./commands/setColor";
 import { ledDiscovery } from "./ledDiscovery";
 import { reqParser } from "./reqParser";
+import { Always } from "@lather/core/lib/esm/conditions";
 
 const app = ledDiscovery.chain(([control]) =>
   reqParser.chain(({ req, res, params }) =>
@@ -15,6 +16,11 @@ const app = ledDiscovery.chain(([control]) =>
         res.writeHead(200);
         res.end("ok");
       })
+      .mapError(() => {
+        res.writeHead(500);
+        res.end("error");
+      })
+      .restoreWhen(Always)
   )
 );
 

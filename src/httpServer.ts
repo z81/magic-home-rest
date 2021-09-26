@@ -4,7 +4,7 @@ import { httpQueue } from "./httpQueue";
 
 export const httpServer = Task.empty
   .map(() => http.createServer((req, res) => httpQueue.add({ req, res })))
-  .tapChain((server) =>
+  .tap((server) =>
     Task.empty
       .access<{ port: number; host: string }>()
       .chain(({ host, port }) =>
@@ -16,7 +16,10 @@ export const httpServer = Task.empty
         console.log("started");
       })
   )
+  .mapError((e) => {
+    console.error(e);
+  })
   .ensure((server) => {
-    console.log("close");
+    console.log("close ");
     server.close();
   });
